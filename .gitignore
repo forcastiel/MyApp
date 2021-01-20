@@ -13,3 +13,5 @@
 .externalNativeBuild
 .cxx
 /.idea/
+/klib/build/
+/klib-ui/build/

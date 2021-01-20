@@ -2,5 +2,10 @@
 <resources>
     <color name="common_transparent">#00000000</color>
     <color name="common_alph_white">#50C0C0C0</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <!--分割线 -->
+    <color name="colorLineGray">#E1E0EA</color>
 
+    <color name="window_background">#F6F6F9</color>
+    <color name="appTitleBarBolderColor">#E1E0EA</color>
 </resources>

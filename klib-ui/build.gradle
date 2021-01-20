@@ -32,26 +32,14 @@ android {
 }
 
 dependencies {
-    //material输入框
-//    api 'com.rengwuxian.materialedittext:library:2.1.4'
-//    带滑动框
-    //    provided 'com.yanzhenjie:recyclerview-swipe:1.0.4'
-    //anko
-//    api "org.jetbrains.anko:anko-sdk15:$rootProject.anko_version"
-//    api "org.jetbrains.anko:anko-common:$rootProject.anko_version"
-//    api "org.jetbrains.anko:anko-support-v4:$rootProject.anko_version"
-//    api "org.jetbrains.anko:anko-appcompat-v7:$rootProject.anko_version"
-//    api "org.jetbrains.anko:anko-recyclerview-v7:$rootProject.anko_version"
-//    api 'com.yqritc:recyclerview-flexibledivider:1.4.0'
-
-    api Libs.com_rengwuxian_materialedittext_library
-    api Libs.anko_sdk15
-    api Libs.anko_common
-    api Libs.anko_support_v4
-    api Libs.anko_appcompat_v7
-    api Libs.anko_recyclerview_v7
-    api Libs.recyclerview_flexibledivider
-
+    api 'com.rengwuxian.materialedittext:library:2.1.4'
+    api 'org.jetbrains.anko:anko-sdk15:0.10.8'
+    api 'org.jetbrains.anko:anko-common:0.10.8'
+    api 'org.jetbrains.anko:anko-support-v4:0.10.8'
+    api 'org.jetbrains.anko:anko-appcompat-v7:0.10.8'
+    api 'org.jetbrains.anko:anko-recyclerview-v7:0.10.8'
+    api 'com.yqritc:recyclerview-flexibledivider:1.4.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
     api project(':klib')
 }
 
@@ -60,10 +48,8 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath Libs.kotlin_gradle_plugin
-        classpath Libs.kotlin_android_extensions
-//        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$rootProject.kotlin_version"
-//        classpath "org.jetbrains.kotlin:kotlin-android-extensions:$rootProject.kotlin_version"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$rootProject.kotlin_version"
+        classpath "org.jetbrains.kotlin:kotlin-android-extensions:$rootProject.kotlin_version"
     }
 }
 repositories {
