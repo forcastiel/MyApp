@@ -1,0 +1,71 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+}
+
+dependencies {
+    //material输入框
+//    api 'com.rengwuxian.materialedittext:library:2.1.4'
+//    带滑动框
+    //    provided 'com.yanzhenjie:recyclerview-swipe:1.0.4'
+    //anko
+//    api "org.jetbrains.anko:anko-sdk15:$rootProject.anko_version"
+//    api "org.jetbrains.anko:anko-common:$rootProject.anko_version"
+//    api "org.jetbrains.anko:anko-support-v4:$rootProject.anko_version"
+//    api "org.jetbrains.anko:anko-appcompat-v7:$rootProject.anko_version"
+//    api "org.jetbrains.anko:anko-recyclerview-v7:$rootProject.anko_version"
+//    api 'com.yqritc:recyclerview-flexibledivider:1.4.0'
+
+    api Libs.com_rengwuxian_materialedittext_library
+    api Libs.anko_sdk15
+    api Libs.anko_common
+    api Libs.anko_support_v4
+    api Libs.anko_appcompat_v7
+    api Libs.anko_recyclerview_v7
+    api Libs.recyclerview_flexibledivider
+
+    api project(':klib')
+}
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath Libs.kotlin_gradle_plugin
+        classpath Libs.kotlin_android_extensions
+//        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$rootProject.kotlin_version"
+//        classpath "org.jetbrains.kotlin:kotlin-android-extensions:$rootProject.kotlin_version"
+    }
+}
+repositories {
+    mavenCentral()
+}

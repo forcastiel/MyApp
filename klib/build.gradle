@@ -1,0 +1,91 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'com.github.dcendents.android-maven'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        debug {
+        }
+
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+}
+
+dependencies {
+//    api 'androidx.recyclerview:recyclerview:1.0.0'
+
+//    api 'androidx.appcompat:appcompat:1.0.0'
+//    api 'androidx.legacy:legacy-support-v4:1.0.0'
+//    api 'io.reactivex:rxandroid:1.2.1'
+//    api 'com.jakewharton.rxbinding:rxbinding:0.4.0'
+//    api 'io.reactivex:rxjava:1.2.1'
+//    api 'com.squareup.picasso:picasso:2.5.2'
+//    api "org.jetbrains.kotlin:kotlin-stdlib:$rootProject.kotlin_version"
+//    api "org.jetbrains.kotlin:kotlin-reflect:$rootProject.kotlin_version"
+//    api 'com.squareup.retrofit2:retrofit:2.1.0'
+//    api 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+//    api 'org.ligboy.retrofit2:converter-fastjson-android:2.1.0'
+//    api 'com.squareup.retrofit2:converter-simplexml:2.1.0'
+//    api 'com.squareup.retrofit2:converter-gson:2.1.0'
+//    api 'com.squareup.retrofit2:converter-scalars:2.0.0-beta4'
+//    api 'com.squareup.okhttp3:okhttp:3.4.2'
+//    api 'com.squareup.okhttp3:logging-interceptor:3.4.2'
+//
+//    api 'androidx.multidex:multidex:2.0.0'
+//    api 'com.aliyun.dpa:oss-android-sdk:2.4.5'
+    api Libs.kotlin_stdlib
+    api Libs.kotlin_reflect
+    api Libs.appcompat
+    api Libs.rxjava
+    api Libs.rxandroid
+    api Libs.rxbinding
+    api Libs.legacy_support_v4
+    api Libs.retrofit
+    api Libs.adapter_rxjava
+    api Libs.converter_fastjson_android
+    api Libs.converter_simplexml
+    api Libs.converter_gson
+    api Libs.okhttp
+    api Libs.logging_interceptor
+    api Libs.multidex
+    api Libs.oss_android_sdk
+    api Libs.picasso
+}
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath Libs.kotlin_gradle_plugin
+        classpath Libs.kotlin_android_extensions
+//        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$rootProject.kotlin_version"
+//        classpath "org.jetbrains.kotlin:kotlin-android-extensions:$rootProject.kotlin_version"
+
+    }
+}
+
+repositories {
+    mavenCentral()
+}

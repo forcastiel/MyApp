@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.shrek.klib.ui.swipe.SwipeMenuLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true">
+
+    <com.shrek.klib.ui.swipe.SwipeMenuView
+        android:id="@+id/swipe_left"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:background="@android:color/background_dark"/>
+
+    <FrameLayout
+        android:id="@+id/swipe_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.shrek.klib.ui.swipe.SwipeMenuView
+        android:id="@+id/swipe_right"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"/>
+
+</com.shrek.klib.ui.swipe.SwipeMenuLayout>

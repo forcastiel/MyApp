@@ -1,2 +1,4 @@
+include ':klib-ui'
+include ':klib'
 include ':app'
 rootProject.name = "MyApp"
